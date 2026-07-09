@@ -49,7 +49,6 @@ Versión en TypeScript del proyecto original [react-guitar-shopping-cart](https:
 - Persistencia del carrito con `useEffect` — guarda el estado en `localStorage` ante cada cambio
 - Comunicación entre componentes mediante props tipadas y funciones callback
 - Manipulación de arreglos con métodos funcionales (`map`, `filter`, `findIndex`, `reduce`)
-- Uso del operador de aserción no-nula (`!`) al obtener el elemento raíz del DOM
 
 ## 🚀 Cómo ejecutar el proyecto
 
