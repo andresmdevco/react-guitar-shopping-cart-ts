@@ -6,6 +6,8 @@ Versión en TypeScript del proyecto original [react-guitar-shopping-cart](https:
 
 ## 🌐 Demo
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7f3b4a95-90b6-40bc-92b3-7a73bf9ea107/deploy-status)](https://app.netlify.com/projects/guitarla-ts-andresmdevco/deploys)
+
 🔗 [https://guitarla-ts-andresmdevco.netlify.app/](https://guitarla-ts-andresmdevco.netlify.app/)
 
 ## 📁 Archivos principales
