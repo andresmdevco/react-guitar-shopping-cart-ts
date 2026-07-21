@@ -10,6 +10,13 @@ Versión en TypeScript del proyecto original [react-guitar-shopping-cart](https:
 
 🔗 [https://guitarla-ts-andresmdevco.netlify.app/](https://guitarla-ts-andresmdevco.netlify.app/)
 
+## 🛠️ Tecnologías utilizadas
+
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
+
 ## 📁 Archivos principales
 
 | Archivo | Descripción |
@@ -20,13 +27,6 @@ Versión en TypeScript del proyecto original [react-guitar-shopping-cart](https:
 | `useCart.ts` | Custom hook que encapsula toda la lógica y el estado del carrito |
 | `db.ts` | Base de datos local tipada con el catálogo de 12 guitarras |
 | `types/index.ts` | Definiciones de tipos (`Guitar`, `CartItem`) compartidas por toda la app |
-
-## 🛠️ Tecnologías utilizadas
-
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ## ✨ Características
 
