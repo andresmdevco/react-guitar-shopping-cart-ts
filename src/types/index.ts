@@ -10,7 +10,6 @@ export type CartItem = Guitar & {
   quantity: number;
 };
 
-
 // Utility Types
 
 // export type CartItem = Pick<Guitar, 'id' | 'name' | 'price'> & {
