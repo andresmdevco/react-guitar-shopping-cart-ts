@@ -70,10 +70,10 @@ export const cartReducer = (state: CartState = initialState, action: CartActions
       }
       return item;
     });
-    
+
     return {
       ...state,
-      cart
+      cart,
     };
   }
 
@@ -97,6 +97,7 @@ export const cartReducer = (state: CartState = initialState, action: CartActions
   if (action.type === 'clear-cart') {
     return {
       ...state,
+      cart: [],
     };
   }
 
