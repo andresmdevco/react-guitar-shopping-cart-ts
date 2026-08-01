@@ -33,7 +33,7 @@ function App() {
         <h2 className="text-center">Nuestra Colección</h2>
         <div className="row mt-5">
           {state.data.map((guitar) => (
-            <Guitar key={guitar.id} guitar={guitar} addToCart={addToCart} />
+            <Guitar key={guitar.id} guitar={guitar} dispatch={dispatch} />
           ))}
         </div>
       </main>
