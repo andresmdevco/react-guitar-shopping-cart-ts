@@ -7,7 +7,6 @@ import { useCart } from './hooks/useCart';
 function App() {
   const {
     cart,
-    addToCart,
     removeFromCart,
     decreaseQuantity,
     increaseQuantity,
