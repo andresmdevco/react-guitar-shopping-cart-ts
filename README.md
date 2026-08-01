@@ -2,7 +2,7 @@
 
 Tienda de guitarras con carrito de compras interactivo construida con React, TypeScript y Vite. Permite explorar un catálogo de 12 guitarras, agregar productos al carrito, ajustar cantidades y ver el total en tiempo real. El carrito persiste entre sesiones gracias a `localStorage`.
 
-Versión en TypeScript del proyecto original [react-guitar-shopping-cart](https://github.com/andresmdevco/react-guitar-shopping-cart), migrado a tipado estático con TypeScript.
+Versión en TypeScript del proyecto original [react-guitar-shopping-cart](https://github.com/andresmdevco/react-guitar-shopping-cart), migrado a tipado estático con TypeScript y con gestión de estado mediante useReducer.
 
 ## 🌐 Demo
 
@@ -22,10 +22,10 @@ https://github.com/user-attachments/assets/5c7eae01-7bf4-4add-a820-5385709c36cd
 
 | Archivo | Descripción |
 |---|---|
-| `App.tsx` | Componente raíz. Consume el hook `useCart` y distribuye el estado a los componentes hijos |
-| `Header.tsx` | Header con carrito desplegable, tabla de productos y total calculado |
-| `Guitar.tsx` | Tarjeta de producto con imagen, nombre, descripción, precio y botón para agregar al carrito |
-| `useCart.ts` | Custom hook que encapsula toda la lógica y el estado del carrito |
+| `App.tsx` | Componente raíz. Inicializa el estado global con `useReducer` y distribuye `state` y `dispatch` a los componentes hijos |
+| `Header.tsx` | Header con carrito desplegable, tabla de productos y total calculado. Recibe `cart` y `dispatch` para despachar las acciones del carrito |
+| `Guitar.tsx` | Tarjeta de producto con imagen, nombre, descripción, precio y botón para agregar al carrito mediante `dispatch` |
+| `cart-reducer.ts` | Reducer que centraliza toda la lógica del carrito: acciones tipadas, estado inicial y transiciones de estado |
 | `db.ts` | Base de datos local tipada con el catálogo de 12 guitarras |
 | `types/index.ts` | Definiciones de tipos (`Guitar`, `CartItem`) compartidas por toda la app |
 
@@ -38,20 +38,22 @@ https://github.com/user-attachments/assets/5c7eae01-7bf4-4add-a820-5385709c36cd
 - **Vaciado del carrito** — Botón para limpiar todos los productos de una sola vez
 - **Total en tiempo real** — Calculado con `useMemo` a partir de la cantidad y precio de cada ítem
 - **Persistencia con localStorage** — El carrito se mantiene al recargar la página
-- **Lazy initializer en `useState`** — El carrito lee `localStorage` solo en el primer renderizado
+- **Estado global con `useReducer`** — Todo el estado de la app (`data`, `cart`) se gestiona desde un único reducer
+- **Acciones tipadas con discriminated unions** — Cada acción del carrito (`add-to-cart`, `remove-from-cart`, `decrease-quantity`, `increase-quantity`, `clear-cart`) tiene su propio `payload` tipado
 - **Tipado estático completo** — Props, estado y funciones tipadas con TypeScript, sin uso de `any`
-- **Lógica extraída a un custom hook** — `useCart` centraliza el estado y las operaciones del carrito, desacoplándolos de la UI
+- **Lógica extraída a un reducer** — `cart-reducer.ts` centraliza el estado y las transiciones del carrito, desacoplándolos de la UI
 
 ## 📚 Conceptos practicados
 
 - Tipado de componentes, props y funciones con TypeScript
 - Definición de tipos reutilizables (`Guitar`, `CartItem`) mediante intersección de tipos (`&`)
-- Extracción de lógica de estado a un custom hook (`useCart`) para separar lógica de presentación
-- Gestión de estado con `useState` y lazy initializer
+- Migración de `useState` + custom hook a `useReducer` para centralizar el estado global
+- Modelado de acciones con discriminated unions (`CartActions`) para tipar `type` y `payload` de forma segura
+- Uso de `Dispatch<CartActions>` para tipar la función `dispatch` recibida por los componentes hijos
+- Actualizaciones inmutables del estado dentro del reducer (`map`, `filter`, spread operator)
+- Persistencia del carrito con `useEffect` — guarda `state.cart` en `localStorage` ante cada cambio
 - Estado derivado con `useMemo` para evitar recálculos innecesarios (`isEmpty`, `cartTotal`)
-- Persistencia del carrito con `useEffect` — guarda el estado en `localStorage` ante cada cambio
-- Comunicación entre componentes mediante props tipadas y funciones callback
-- Manipulación de arreglos con métodos funcionales (`map`, `filter`, `findIndex`, `reduce`)
+- Comunicación entre componentes mediante props tipadas y `dispatch`
 
 ## 🚀 Cómo ejecutar el proyecto
 
