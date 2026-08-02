@@ -29,7 +29,6 @@ const MAX_ITEMS = 5;
 export const cartReducer = (state: CartState = initialState, action: CartActions) => {
   if (action.type === 'add-to-cart') {
     const itemExists = state.cart.find((guitar) => guitar.id === action.payload.item.id);
-    console.log(itemExists);
 
     let updatedCart: CartItem[];
     if (itemExists) {
