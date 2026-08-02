@@ -11,7 +11,7 @@ Versión en TypeScript del proyecto original [react-guitar-shopping-cart](https:
 ## 👀 Vista previa
 https://github.com/user-attachments/assets/5c7eae01-7bf4-4add-a820-5385709c36cd
 
-## 🛠️ Tecnologías utilizadas
+## 🛠️ Tecnologías Utilizadas
 
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -23,7 +23,7 @@ https://github.com/user-attachments/assets/5c7eae01-7bf4-4add-a820-5385709c36cd
 | Archivo | Descripción |
 |---|---|
 | `App.tsx` | Componente raíz. Inicializa el estado global con `useReducer` y distribuye `state` y `dispatch` a los componentes hijos |
-| `Header.tsx` | Header con carrito desplegable, tabla de productos y total calculado. Recibe `cart` y `dispatch` para despachar las acciones del carrito |
+| `Header.tsx` | Header con carrito desplegable, tabla de productos y total calculado. Recibe `cart` y `dispatch` para disparar las acciones del carrito |
 | `Guitar.tsx` | Tarjeta de producto con imagen, nombre, descripción, precio y botón para agregar al carrito mediante `dispatch` |
 | `cart-reducer.ts` | Reducer que centraliza toda la lógica del carrito: acciones tipadas, estado inicial y transiciones de estado |
 | `db.ts` | Base de datos local tipada con el catálogo de 12 guitarras |
