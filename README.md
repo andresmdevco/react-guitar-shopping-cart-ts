@@ -43,7 +43,7 @@ https://github.com/user-attachments/assets/5c7eae01-7bf4-4add-a820-5385709c36cd
 - **Tipado estático completo** — Props, estado y funciones tipadas con TypeScript, sin uso de `any`
 - **Lógica extraída a un reducer** — `cart-reducer.ts` centraliza el estado y las transiciones del carrito, desacoplándolos de la UI
 
-## 📚 Conceptos practicados
+## 📚 Conceptos aplicados
 
 - Tipado de componentes, props y funciones con TypeScript
 - Definición de tipos reutilizables (`Guitar`, `CartItem`) mediante intersección de tipos (`&`)
